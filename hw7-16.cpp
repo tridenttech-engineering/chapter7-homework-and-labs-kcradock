@@ -14,15 +14,13 @@ int main()
 	cout << "Bill amount: ";
 	cin >> bill;
 
-	cout << "Rate: ";
-	cin >> rate;
-	tip = bill * rate;
-	cout << fixed << setprecision(2);
-
-	while (rate <= 0.2)
-		rate = rate + 0.05;
-		} //end while
-cout << fixed << setprecision(2);
-cout << "Tip: $" << tip << endl;
-	return 0;
-}	//end of main function
+	while (rate<=0.2)
+			{
+				rate += 0.05;
+	
+			tip = bill * rate;
+			cout << fixed << setprecision(2);
+			cout << rate *100 << "% tip: ";
+			cout << "$" << tip << endl;
+		} 	//end while
+}
